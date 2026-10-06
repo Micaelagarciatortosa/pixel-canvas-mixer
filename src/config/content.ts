@@ -221,32 +221,6 @@ export const FEATURED_CASE = {
   url: "https://www.anncestral.com.mx/tienda",
 };
 
-/** Estructura lista para cargar casos reales. */
-export type CaseStudy = {
-  client: string;
-  industry: string;
-  problem: string;
-  solution: string;
-  result: string;
-};
-
-export const CASES: CaseStudy[] = [
-  {
-    client: "Caso 01",
-    industry: "Ecommerce",
-    problem: "Tráfico alto y conversión baja.",
-    solution: "Rediseño de ficha de producto y checkout.",
-    result: "+XX% conversión",
-  },
-  {
-    client: "Caso 02",
-    industry: "Publicidad",
-    problem: "Inversión sin atribución clara.",
-    solution: "Medición unificada y reestructura de campañas.",
-    result: "+XX% ROAS",
-  },
-];
-
 export const FAQS = [
   {
     q: "¿Trabajan con tiendas que ya están funcionando?",
@@ -266,14 +240,3 @@ export const FAQS = [
   },
 ];
 
-export const NEEDS = [
-  "Ecommerce",
-  "Publicidad",
-  "UX",
-  "Desarrollo web",
-  "Automatizaciones",
-  "SEO",
-  "Email Marketing",
-  "Analítica",
-  "Otro",
-];

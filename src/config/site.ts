@@ -36,7 +36,7 @@ export const COUNTRIES: Record<CountryCode, CountryConfig> = {
     flag: "🇲🇽",
     whatsapp: "5215525231351",
     phone: "+52 1 55 2523 1351",
-    email: "hola@empoweryourself.mx",
+    email: "holaempoweryourself@gmail.com",
     city: "Ciudad de México",
     currencyNote: "Trabajamos con marcas de toda la República",
     whatsappMessage:
@@ -56,7 +56,7 @@ export const DEFAULT_COUNTRY: CountryCode = "MX";
 export const SITE = {
   name: "Empower Yourself",
   tagline: "Tu ecommerce. Potenciado.",
-  url: "",
+  url: "https://empoweryourself.com.mx",
   social: {
     linkedin: "https://www.linkedin.com/",
     instagram: "https://www.instagram.com/",
