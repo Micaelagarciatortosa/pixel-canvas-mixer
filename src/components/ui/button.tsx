@@ -9,6 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        empower: "min-h-12 rounded-lg bg-volt text-ink ring-1 ring-volt hover:shadow-[var(--glow-volt-strong)]",
+        empowerOutline: "size-11 rounded-xl ring-1 ring-line text-mist hover:ring-volt/40 hover:text-bone",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
