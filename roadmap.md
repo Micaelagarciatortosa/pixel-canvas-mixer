@@ -3,4 +3,4 @@
 - [x] Preserve its design, services, and migrate its media.
 - [x] Remove Argentina and country selection throughout the site.
 - [x] Update Mexican copy, contacts, and page metadata.
-- [ ] Verify market rules and the visible pages.
+- [x] Verify market rules and the visible pages.
