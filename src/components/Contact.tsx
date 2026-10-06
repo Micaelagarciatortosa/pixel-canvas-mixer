@@ -45,7 +45,7 @@ export function Contact() {
 
             <div className="flex flex-col items-start gap-6 rounded-3xl bg-panel p-6 ring-1 ring-line reveal sm:p-8">
               <p className="text-pretty text-sm text-mist">
-                Contanos dónde está tu ecommerce hoy y te proponemos los próximos pasos.
+                Cuéntanos dónde está tu ecommerce hoy y te proponemos los próximos pasos.
                 Respondemos en menos de 24 horas hábiles.
               </p>
               <Button asChild variant="empower" className="w-full">
@@ -61,7 +61,7 @@ export function Contact() {
                 </a>
               </Button>
               <p className="text-xs text-mist">
-                O escribinos directo a{" "}
+                O escríbenos directo a{" "}
                 <a href={`mailto:${country.email}`} className="text-bone hover:text-volt">
                   {country.email}
                 </a>
