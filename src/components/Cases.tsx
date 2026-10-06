@@ -1,4 +1,4 @@
-import { CASES, FEATURED_CASE } from "@/config/content";
+import { FEATURED_CASE } from "@/config/content";
 import { Cta } from "@/components/Cta";
 import { track } from "@/lib/analytics";
 import caseLogo from "@/assets/anncestral-logo.png.asset.json";
@@ -89,29 +89,6 @@ export function Cases() {
           </div>
         </article>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {CASES.map((c) => (
-            <article
-              key={c.client}
-              className="flex min-h-[300px] flex-col rounded-3xl bg-panel/50 p-6 ring-1 ring-line transition-all hover:ring-volt/40 reveal"
-            >
-              <div className="grid flex-1 place-items-center rounded-2xl border border-dashed border-line">
-                <span className="text-[10px] font-medium uppercase tracking-[0.15em] text-mist">
-                  Imagen del caso
-                </span>
-              </div>
-              <div className="mt-5 text-xs text-mist">{c.industry}</div>
-              <h3 className="mt-2 font-medium text-bone">{c.client}</h3>
-              <p className="mt-2 text-xs text-mist">
-                <span className="text-bone/80">Problema:</span> {c.problem}
-              </p>
-              <p className="mt-1 text-xs text-mist">
-                <span className="text-bone/80">Solución:</span> {c.solution}
-              </p>
-              <p className="mt-3 font-display text-lg font-semibold text-volt">{c.result}</p>
-            </article>
-          ))}
-        </div>
 
         <div className="mt-10 reveal">
           <Cta variant="ghost" event="cta_cases">

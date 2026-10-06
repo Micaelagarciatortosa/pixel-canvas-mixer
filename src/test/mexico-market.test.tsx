@@ -19,6 +19,6 @@ describe("Mexico-only market", () => {
 
   it("routes WhatsApp contact to the original Mexico number", () => {
     expect(new URL(whatsappUrl(COUNTRIES.MX)).pathname).toBe("/5215525231351");
-    expect(COUNTRIES.MX.email).toBe("hola@empoweryourself.mx");
+    expect(COUNTRIES.MX.email).toBe("holaempoweryourself@gmail.com");
   });
 });
