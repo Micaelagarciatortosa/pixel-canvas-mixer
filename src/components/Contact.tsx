@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useCountry } from "@/hooks/useCountry";
 import { Mascot } from "@/components/Mascot";
 import { track } from "@/lib/analytics";
-import { whatsappUrl } from "@/config/site";
+import { whatsappUrl, telUrl } from "@/config/site";
 
 export function Contact() {
   const { country, code } = useCountry();
@@ -23,12 +23,10 @@ export function Contact() {
               </p>
               <div className="mt-8 space-y-2 text-sm">
                 <p className="text-mist">
-                  WhatsApp {country.name}:{" "}
+                  Teléfono:{" "}
                   <a
-                    href={whatsappUrl(country)}
-                    target="_blank"
-                    rel="noopener"
-                    onClick={() => track("whatsapp_click", { country: code, place: "contacto" })}
+                    href={telUrl(country)}
+                    onClick={() => track("tel_click", { place: "contacto" })}
                     className="font-medium text-volt hover:opacity-80"
                   >
                     {country.phone}
