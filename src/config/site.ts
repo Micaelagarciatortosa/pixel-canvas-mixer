@@ -34,19 +34,19 @@ export const COUNTRIES: Record<CountryCode, CountryConfig> = {
     label: "MX",
     name: "México",
     flag: "🇲🇽",
-    whatsapp: "5215525231351",
-    phone: "+52 1 55 2523 1351",
-    email: "holaempoweryourself@gmail.com",
+    whatsapp: "5215516538728",
+    phone: "+52 1 55 1653 8728",
+    email: "contacto@empoweryourself.com.mx",
     city: "Ciudad de México",
-    currencyNote: "Trabajamos con marcas de toda la República",
+    currencyNote: "Trabajamos con marcas de toda Latinoamérica",
     whatsappMessage:
       "Hola! Quiero potenciar mi ecommerce y me gustaría conocer más sobre Empower Yourself.",
     copy: {
-      heroKicker: "Agencia de ecommerce y growth · México",
+      heroKicker: "Agencia de ecommerce y growth",
       ctaPrimary: "Potencia tu ecommerce",
       ctaSecondary: "Hablar con un experto",
       finalCta: "Quiero potenciar mi ecommerce",
-      marketLine: "Meta Ads, Google Ads y Mercado Ads para marcas mexicanas",
+      marketLine: "Meta Ads, Google Ads y Mercado Ads orientados a ventas",
     },
   },
 };
@@ -75,4 +75,9 @@ export const ANALYTICS = {
 
 export function whatsappUrl(country: CountryConfig) {
   return `https://wa.me/${country.whatsapp}?text=${encodeURIComponent(country.whatsappMessage)}`;
+}
+
+/** Enlace de llamada directa con el número en formato internacional. */
+export function telUrl(country: CountryConfig) {
+  return `tel:+${country.whatsapp}`;
 }

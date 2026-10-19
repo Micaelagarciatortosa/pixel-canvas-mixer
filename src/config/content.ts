@@ -228,7 +228,7 @@ export const FAQS = [
   },
   {
     q: "¿Con qué plataformas de ecommerce trabajan?",
-    a: "Trabajamos con las plataformas más usadas en México, además de desarrollos a medida cuando el negocio lo necesita.",
+    a: "Trabajamos con las plataformas de ecommerce más usadas en Latinoamérica, además de desarrollos a medida cuando el negocio lo necesita.",
   },
   {
     q: "¿Puedo contratar un solo servicio?",

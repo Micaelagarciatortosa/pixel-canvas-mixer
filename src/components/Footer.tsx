@@ -1,4 +1,4 @@
-import { COUNTRIES, SITE, whatsappUrl } from "@/config/site";
+import { COUNTRIES, SITE, whatsappUrl, telUrl } from "@/config/site";
 import { Logo } from "@/components/Logo";
 import { track } from "@/lib/analytics";
 
@@ -22,7 +22,7 @@ export function Footer() {
         <div className="md:col-span-1">
           <Logo />
           <p className="mt-4 max-w-[36ch] text-pretty text-sm text-mist">
-            {SITE.tagline} Potenciamos negocios digitales en México.
+            {SITE.tagline} Potenciamos negocios digitales en toda Latinoamérica.
           </p>
           <div className="mt-5 flex gap-4 text-sm text-mist">
             <a href={SITE.social.linkedin} target="_blank" rel="noopener" className="hover:text-bone">LinkedIn</a>
@@ -46,11 +46,17 @@ export function Footer() {
             <h2 className="text-xs uppercase tracking-[0.18em] text-mist">{c.name}</h2>
             <p className="mt-3 text-sm text-mist">{c.city}</p>
             <a
+              href={telUrl(c)}
+              className="mt-2 block text-sm text-bone hover:text-volt"
+            >
+              Tel. {c.phone}
+            </a>
+            <a
               href={whatsappUrl(c)}
               target="_blank"
               rel="noopener"
               onClick={() => track("whatsapp_click", { country: c.code, place: "footer" })}
-              className="mt-2 block text-sm text-bone hover:text-volt"
+              className="mt-1 block text-sm text-bone hover:text-volt"
             >
               WhatsApp {c.phone}
             </a>

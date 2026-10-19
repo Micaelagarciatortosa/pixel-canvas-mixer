@@ -18,9 +18,9 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 
-const title = "Empower Yourself | Agencia de ecommerce en México";
+const title = "Empower Yourself | Agencia de ecommerce y growth";
 const description =
-  "Potenciamos tu ecommerce para que venda más: UX, publicidad digital, desarrollo, automatizaciones, email marketing, SEO y analítica en México.";
+  "Potenciamos tu ecommerce para que venda más: UX, publicidad digital, desarrollo, automatizaciones, email marketing, SEO y analítica.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -31,7 +31,6 @@ const jsonLd = {
       name: SITE.name,
       url: SITE.url,
       description,
-      areaServed: ["MX"],
     },
     {
       "@type": "WebSite",
@@ -46,7 +45,6 @@ const jsonLd = {
       name: s.title,
       description: s.text,
       provider: { "@id": `${SITE.url}#organization` },
-      areaServed: ["MX"],
     })),
     {
       "@type": "FAQPage",
@@ -68,7 +66,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:locale", content: "es_MX" },
+      { property: "og:locale", content: "es_LA" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
