@@ -58,8 +58,8 @@ export const SITE = {
   tagline: "Tu ecommerce. Potenciado.",
   url: "https://empoweryourself.com.mx",
   social: {
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
+    linkedin: "https://www.linkedin.com/company/empoweryours/",
+    instagram: "https://www.instagram.com/oficialempoweryourself/",
   },
 };
 

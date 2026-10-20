@@ -27,6 +27,7 @@ export function Footer() {
           <div className="mt-5 flex gap-4 text-sm text-mist">
             <a href={SITE.social.linkedin} target="_blank" rel="noopener" className="hover:text-bone">LinkedIn</a>
             <a href={SITE.social.instagram} target="_blank" rel="noopener" className="hover:text-bone">Instagram</a>
+            <span>Facebook</span>
           </div>
         </div>
 

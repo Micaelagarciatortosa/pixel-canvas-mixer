@@ -1,9 +1,9 @@
 import { FEATURED_CASE } from "@/config/content";
 import { Cta } from "@/components/Cta";
 import { track } from "@/lib/analytics";
-import caseLogo from "@/assets/anncestral-logo.png.asset.json";
-import caseEmblem from "@/assets/anncestral-emblema.png.asset.json";
-import caseImage from "@/assets/anncestral-caso.jpg.asset.json";
+const caseLogo = { url: "/images/anncestral-logo.png" };
+const caseEmblem = { url: "/images/anncestral-emblema.png" };
+const caseImage = { url: "/images/anncestral-caso.jpg" };
 
 export function Cases() {
   return (
