@@ -1,6 +1,7 @@
-import { FEATURED_CASE } from "@/config/content";
+import { FEATURED_CASE, SECOND_CASE } from "@/config/content";
 import { Cta } from "@/components/Cta";
 import { track } from "@/lib/analytics";
+import huellitasCaso from "@/assets/huellitas-caso.png.asset.json";
 const caseLogo = { url: "/images/anncestral-logo.png" };
 const caseEmblem = { url: "/images/anncestral-emblema.png" };
 const caseImage = { url: "/images/anncestral-caso.jpg" };
@@ -89,6 +90,69 @@ export function Cases() {
           </div>
         </article>
 
+        {/* Caso: Huellitas Consentidas */}
+        <article className="reveal mt-8 group overflow-hidden rounded-3xl bg-panel/60 ring-1 ring-line transition-shadow hover:shadow-[var(--glow-volt)]">
+          <div className="grid lg:grid-cols-2">
+            <div className="relative min-h-[280px] overflow-hidden sm:min-h-[360px] lg:min-h-[460px] lg:order-last">
+              <img
+                src={huellitasCaso.url}
+                alt="Empaque de galletitas para perros de Huellitas Consentidas junto a perros y un gato"
+                loading="lazy"
+                className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(195deg,transparent_45%,color-mix(in_oklab,var(--ink)_78%,transparent))]" />
+            </div>
+
+            <div className="p-6 sm:p-8 lg:p-10">
+              <span className="text-xs uppercase tracking-[0.2em] text-volt">
+                Caso
+              </span>
+
+              <h3 className="mt-6 text-2xl font-semibold text-bone sm:text-3xl">
+                Huellitas Consentidas
+              </h3>
+              <p className="mt-2 text-sm text-mist">{SECOND_CASE.origin}</p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {SECOND_CASE.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full px-3 py-1 text-[11px] font-medium text-mist ring-1 ring-line"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.18em] text-bone/70">Desafío</h3>
+                  <p className="mt-2 max-w-[52ch] text-pretty text-sm text-mist">
+                    {SECOND_CASE.challenge}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.18em] text-bone/70">
+                    Qué hicimos
+                  </h3>
+                  <p className="mt-2 max-w-[52ch] text-pretty text-sm text-mist">
+                    {SECOND_CASE.work}
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={SECOND_CASE.url}
+                target="_blank"
+                rel="noopener"
+                onClick={() => track("case_huellitas")}
+                className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-volt transition-opacity hover:opacity-80"
+              >
+                Ver el sitio de Huellitas →
+              </a>
+            </div>
+          </div>
+        </article>
 
         <div className="mt-10 reveal">
           <Cta variant="ghost" event="cta_cases">
