@@ -221,6 +221,18 @@ export const FEATURED_CASE = {
   url: "https://www.anncestral.com.mx/tienda",
 };
 
+/** Caso real: Huellitas Consentidas. Sin métricas inventadas. */
+export const SECOND_CASE = {
+  client: "Huellitas Consentidas",
+  origin: "Snacks funcionales para mascotas · México",
+  tagline: "Web + Branding + Packaging",
+  tags: ["Diseño Web", "Branding", "Packaging"],
+  challenge:
+    "Lanzar la marca con una identidad propia y un sitio donde los snacks para perros y gatos se puedan conocer y comprar con claridad.",
+  work: "Diseño y desarrollo de la página web, branding y diseño de packaging para la línea de snacks.",
+  url: "https://www.huellitasconsentidas.com.mx/",
+};
+
 export const FAQS = [
   {
     q: "¿Trabajan con tiendas que ya están funcionando?",
