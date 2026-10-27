@@ -1,7 +1,7 @@
 import { FEATURED_CASE, SECOND_CASE } from "@/config/content";
 import { Cta } from "@/components/Cta";
 import { track } from "@/lib/analytics";
-import huellitasCaso from "@/assets/huellitas-caso.png.asset.json";
+import huellitasCaso from "@/assets/huellitas-caso.jpg.asset.json";
 const caseLogo = { url: "/images/anncestral-logo.png" };
 const caseEmblem = { url: "/images/anncestral-emblema.png" };
 const caseImage = { url: "/images/anncestral-caso.jpg" };
