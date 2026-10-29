@@ -233,6 +233,28 @@ export const SECOND_CASE = {
   url: "https://www.huellitasconsentidas.com.mx/",
 };
 
+/** Casos de página web + diseño gráfico. Sin métricas inventadas. */
+export const WEB_CASES = [
+  {
+    client: "Smart Coliving",
+    origin: "Coliving · Ciudad de México",
+    tags: ["Diseño Web", "Diseño Gráfico"],
+    work: "Diseño y desarrollo de la página web y piezas de diseño gráfico para comunicar la experiencia de vivir en comunidad.",
+    url: "https://www.smartcoliving.info/",
+    image: "/images/smartcoliving-caso.jpg",
+    alt: "Página web de Smart Coliving con personas celebrando",
+  },
+  {
+    client: "Unidad Médica de Servicios",
+    origin: "Atención médica integral",
+    tags: ["Diseño Web", "Diseño Gráfico"],
+    work: "Diseño y desarrollo de la página web, con agenda de turnos y contacto directo, y piezas de diseño gráfico.",
+    url: "https://infounidadmedicade.wixsite.com/unidadmedica",
+    image: "/images/unidadmedica-caso.jpg",
+    alt: "Página web de Unidad Médica de Servicios",
+  },
+];
+
 export const FAQS = [
   {
     q: "¿Trabajan con tiendas que ya están funcionando?",

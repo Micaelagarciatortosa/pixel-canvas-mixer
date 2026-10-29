@@ -1,7 +1,12 @@
-import { FEATURED_CASE, SECOND_CASE } from "@/config/content";
+import { FEATURED_CASE, SECOND_CASE, WEB_CASES } from "@/config/content";
 import { Cta } from "@/components/Cta";
 import { track } from "@/lib/analytics";
-import huellitasCaso from "@/assets/huellitas-caso.jpg.asset.json";
+const huellitasCaso = { url: "/images/huellitas-caso.jpg" };
+const huellitasPack = [
+  { src: "/images/huellitas-pack-1.jpg", alt: "Empaque de hígados para perro de Huellitas Consentidas" },
+  { src: "/images/huellitas-pack-2.jpg", alt: "Empaque de hígados para gato de Huellitas Consentidas" },
+  { src: "/images/huellitas-pack-3.jpg", alt: "Empaque frontal de snacks de Huellitas Consentidas" },
+];
 const caseLogo = { url: "/images/anncestral-logo.png" };
 const caseEmblem = { url: "/images/anncestral-emblema.png" };
 const caseImage = { url: "/images/anncestral-caso.jpg" };
@@ -141,6 +146,21 @@ export function Cases() {
                 </div>
               </div>
 
+              <div className="mt-8">
+                <h3 className="text-xs uppercase tracking-[0.18em] text-bone/70">Packaging</h3>
+                <div className="mt-3 grid grid-cols-3 gap-3">
+                  {huellitasPack.map((p) => (
+                    <img
+                      key={p.src}
+                      src={p.src}
+                      alt={p.alt}
+                      loading="lazy"
+                      className="aspect-[3/4] w-full rounded-xl bg-bone object-contain ring-1 ring-line"
+                    />
+                  ))}
+                </div>
+              </div>
+
               <a
                 href={SECOND_CASE.url}
                 target="_blank"
@@ -153,6 +173,49 @@ export function Cases() {
             </div>
           </div>
         </article>
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
+          {WEB_CASES.map((c) => (
+            <article
+              key={c.client}
+              className="reveal group overflow-hidden rounded-3xl bg-panel/60 ring-1 ring-line transition-shadow hover:shadow-[var(--glow-volt)]"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.alt}
+                  loading="lazy"
+                  className="absolute inset-0 size-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="p-6 sm:p-8">
+                <span className="text-xs uppercase tracking-[0.2em] text-volt">Caso</span>
+                <h3 className="mt-4 text-2xl font-semibold text-bone">{c.client}</h3>
+                <p className="mt-2 text-sm text-mist">{c.origin}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {c.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full px-3 py-1 text-[11px] font-medium text-mist ring-1 ring-line"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="mt-6 text-xs uppercase tracking-[0.18em] text-bone/70">Qué hicimos</h4>
+                <p className="mt-2 text-pretty text-sm text-mist">{c.work}</p>
+                <a
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-volt transition-opacity hover:opacity-80"
+                >
+                  Ver el sitio →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
 
         <div className="mt-10 reveal">
           <Cta variant="ghost" event="cta_cases">
